@@ -1,13 +1,13 @@
-# [GroupID] Title of your final project
+# [Group6] 信用卡流失客戶預測
 
 ### Groups
-* name, student ID1
+* 林書亞, 107302003
 * name, student ID2
 * name, student ID3
 * ...
 
 ### Goal
-A breif introduction about your project, i.e., what is your goal?
+從歷史信用卡留存/流失客戶的資料中，挖掘影響用戶流失的重要因子，並預測目前用戶的流失機率
 
 ### Demo 
 You should provide an example commend to reproduce your result
@@ -26,7 +26,7 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 
 ### data
 
-* Source
+* Source：https://www.kaggle.com/sakshigoyal7/credit-card-customers
 * Input format
 * Any preprocessing?
   * Handle missing data
