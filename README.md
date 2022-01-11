@@ -29,18 +29,25 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 * Source：https://www.kaggle.com/sakshigoyal7/credit-card-customers
 * Input format
 * Any preprocessing?
-  * Handle missing data
-  * Scale value
+  * 欄位刪減：將相關性高的信用額度和近12個月平均額度擇其一留下
+  * 數值調整：將總交易金額調整為平均交易金額
+  * 樣本平衡：流失客戶樣本過少，採取SMOTE, MWMOTE方式產生流失客戶樣本
 
 ### code
 
 * Which method do you use?
+ * 模型：決策樹、隨機森林、XGBoost
+ * 樣本產生方法：SMOTE, MWMOTE
 * What is a null model for comparison?
+ * 以未做樣本平衡訓練出來的模型作為 null model
 * How do your perform evaluation? ie. cross-validation, or addtional indepedent data set
+ * 從原始資料中隨機抽樣20%資料，剩餘的80%資料透過5-fold cross-validation做驗證
+
 
 ### results
 
 * Which metric do you use 
+  * 
   * precision, recall, R-square
 * Is your improvement significant?
 * What is the challenge part of your project?
