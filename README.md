@@ -60,7 +60,7 @@ Rscript code/your_script.R --input data/training --modeloutput results/model_per
   * SMOTE較未平衡資料，提升0.0832的Recall
 * What is the challenge part of your project?
   * 樣本極度不平均，雖然整體模型的precision很高，但預測到確實流失的客戶很少，再嘗試多種平衡樣本的方式後，才讓預測流失客戶的部分精準許多
-
+  * 以Recall指標為準，我們嘗試過Oversampling、Undersampling、ROSE、SMOTE以及MWMOTE。發現如果要極致的提高 recall 就是直接把多數類樣本做 Undersampling，然後少數的那部分做 Oversampling。所以純 Undersample 及 SMOTE 來說是最契合的，其次是 ROSE 跟 MWMOTE，兩者在提高不少Recall的情況下也能維持穩定Accuracy，Oversampling 則是小幅提高 Recall 而不影響 Accuracy，不進行處理則居於末位。
 ## References
 * Code/implementation which you include/reference (__You should indicate in your presentation if you use code for others. Otherwise, cheating will result in 0 score for final project.__)
   * 決策樹：https://www.google.com/search?q=r+decision+tree&oq=r++de&aqs=edge.1.69i57j69i59j0i512l5j69i60j69i65.7924j0j4&sourceid=chrome&ie=UTF-8 
