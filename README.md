@@ -12,7 +12,7 @@
 ### Demo 
 You should provide an example commend to reproduce your result
 ```R
-Rscript code/your_script.R --input data/training --output results/performance.tsv
+Rscript code/your_script.R --input data/training --modeloutput results/model_performance.csv --sampleoutput results/sample_performance.csv
 ```
 * any on-line visualization
 
@@ -27,11 +27,12 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 * Source：https://www.kaggle.com/sakshigoyal7/credit-card-customers
 * Input format
   * 目標欄位：流失用戶標記(流失/留存)
-  * 數值型欄位：年齡、家人數量、成為會員月數、目前擁有產品數、近一年不活躍月份數、近一年簽約數、信用額度、總循環信用、近一年月平均額度、總交易次數、總交易額、第四季與第一季交易變化數、額度使用率
+  * 數值型欄位：年齡、家人數量、成為會員月數、目前擁有產品數、近一年不活躍月份數、近一年簽約數、信用額度、總循環信用、近一年月平均額度、總交易次數、總交易金額、第四季與第一季交易變化數、額度使用率
   * 類別型欄位：性別、教育程度、婚姻狀態、收入類別、信用卡等級
 * Any preprocessing?
-  * 欄位刪減：將相關性高的信用額度和近12個月平均額度擇其一留下
+  * 欄位刪減：將相關性高的信用額度和近12個月平均額度擇其一留下（選擇保留12個月平均額度）
   * 數值調整：將總交易金額調整為平均交易金額
+  * 類別型資料中Unknown類別的補值：收入類別的Unknown改以$60-80K收入水準取代、教育程度類別的Unknown改以高中程度教育水準取代
   * 樣本平衡：流失客戶樣本過少，採取SMOTE, MWMOTE方式產生流失客戶樣本
 
 ### code
@@ -48,11 +49,12 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
 ### results
 
 * Which metric do you use 
-  * 三種模型比較：AUC 
-  * 不同抽樣方法比較：Recall
+  * 三種模型比較指標：AUC 
+  * 不同抽樣方法比較指標：Recall
 * Is your improvement significant?
-  * XGBoost的AUC高達xx，相較於決策樹的yy，提升zz
-  * SMOTE較未平衡資料，提升xx Recall
+  * XGBoost的AUC高達0.984，相較於決策樹的0.916，提升0.068
+  * XGBoost的AUC高達0.984，相較於隨機森林的0.96，提升0.024
+  * SMOTE較未平衡資料，提升0.0832的Recall
 * What is the challenge part of your project?
   * 樣本極度不平均，雖然整體模型的precision很高，但預測到確實流失的客戶很少，再嘗試多種平衡樣本的方式後，才讓預測流失客戶的部分精準許多
 
@@ -68,5 +70,8 @@ Rscript code/your_script.R --input data/training --output results/performance.ts
   *  ROSE
   *  caret
   *  randomForest
-  *  ROCR
   *  xgboost
+  *  ROCR
+  *  Ckmeans.1d.dp
+  *  vip
+  *  ggplot2
