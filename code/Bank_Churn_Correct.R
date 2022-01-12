@@ -78,12 +78,11 @@ orig_label <- data$Attrition_Flag
 dummy <- dummyVars(" Attrition_Flag ~ .", data=data)
 dum_data <- data.frame(predict(dummy, newdata = data))
 dum_data$Attrition_Flag <- orig_label
-income_cat_index <- which(dum_data$Income_Category.Unknown==1)
-dum_data[income_cat_index,"Income_Category..60K....80K"] <- 1
-dum_data <- subset(dum_data, select = -c(Income_Category.Unknown))
-edu_cat_index <- which(dum_data$Education_Level.Unknown==1)
-dum_data[edu_cat_index,"Education_Level.High.School"] <- 1
-dum_data <- subset(dum_data, select = -c(Education_Level.Unknown))
+income_cat_index <- which(dum_data[,20]==1)
+dum_data[income_cat_index,17] <- 1
+edu_cat_index <- which(dum_data[,10]==1)
+dum_data[edu_cat_index,7] <- 1
+dum_data = select(dum_data,-10, -20)
 
 set.seed(3456)
 
