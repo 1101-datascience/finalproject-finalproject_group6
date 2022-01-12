@@ -26,7 +26,7 @@ Rscript code/your_script.R --input data/training --modeloutput results/model_per
 
 * Source：https://www.kaggle.com/sakshigoyal7/credit-card-customers
 * Input format
-  * 目標欄位：流失用戶標記(流失/留存)
+  * 目標欄位：流失用戶標記（流失/留存）
   * 數值型欄位：年齡、家人數量、成為會員月數、目前擁有產品數、近一年不活躍月份數、近一年簽約數、信用額度、總循環信用、近一年月平均額度、總交易次數、總交易金額、第四季與第一季交易變化數、額度使用率
   * 類別型欄位：性別、教育程度、婚姻狀態、收入類別、信用卡等級
 * Any preprocessing?
@@ -34,6 +34,8 @@ Rscript code/your_script.R --input data/training --modeloutput results/model_per
   * 數值調整：將總交易金額調整為平均交易金額
   * 收入類別資料中Unknown類別的處理：以$60-80K收入水準取代
   * 教育程度類別資料中Unknown類別的處理：以高中程度教育水準取代
+  * 年齡變數（數值型）轉類別型：26 ~ 35、36 ~ 45、46 ~ 55、56 ~ 65、>65
+  * 成為會員月數變數（數值型）轉類別型：0 ~ 10、11 ~ 20、21 ~ 30、31 ~ 40、>40
   * 樣本平衡：流失客戶樣本過少，採取SMOTE, MWMOTE方式產生流失客戶樣本
 
 ### code
