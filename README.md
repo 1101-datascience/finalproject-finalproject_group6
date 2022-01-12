@@ -19,7 +19,7 @@ Rscript Bank_Churn_Correct.R --input BankChurners.csv --modeloutput results/mode
 ## Folder organization and its related information
 
 ### docs
-* Your presentation, 1101_datascience_FP_<yourID|groupName>.ppt/pptx/pdf, by **Jan. 13**
+* Your presentation, 1101_datascience_FP_group6.pdf, by **Jan. 13**
 
 
 ### data
