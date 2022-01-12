@@ -1,0 +1,4 @@
+fold,training,validation,test,auc,model
+5,0.9321,0.9241,0.9352,0.916,decision_tree
+5,0.9077,0.9342,0.9346,0.96,random_forest
+5,0.982,0.9563,0.952,0.9828,XG_Boost
