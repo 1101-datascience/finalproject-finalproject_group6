@@ -32,7 +32,8 @@ Rscript code/your_script.R --input data/training --modeloutput results/model_per
 * Any preprocessing?
   * 欄位刪減：將相關性高的信用額度和近12個月平均額度擇其一留下（選擇保留12個月平均額度）
   * 數值調整：將總交易金額調整為平均交易金額
-  * 類別型資料中Unknown類別的補值：收入類別的Unknown改以$60-80K收入水準取代、教育程度類別的Unknown改以高中程度教育水準取代
+  * 收入類別資料中Unknown類別的處理：以$60-80K收入水準取代
+  * 教育程度類別資料中Unknown類別的處理：以高中程度教育水準取代
   * 樣本平衡：流失客戶樣本過少，採取SMOTE, MWMOTE方式產生流失客戶樣本
 
 ### code
