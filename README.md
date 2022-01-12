@@ -12,7 +12,7 @@
 ### Demo 
 You should provide an example commend to reproduce your result
 ```R
-Rscript code/your_script.R --input data/training --modeloutput results/model_performance.csv --sampleoutput results/sample_performance.csv -fsoutput results/fs_performance.csv
+Rscript code/your_script.R --input data/training --modeloutput results/model_performance.csv --sampleoutput results/sample_performance.csv --fsoutput results/fs_performance.csv
 ```
 * any on-line visualization
 
