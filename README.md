@@ -70,7 +70,6 @@ Rscript code/your_script.R --input data/training --modeloutput results/model_per
   *  dplyr
   *  imbalance
   *  DMwR
-  *  ROSE
   *  caret
   *  randomForest
   *  xgboost
@@ -78,3 +77,4 @@ Rscript code/your_script.R --input data/training --modeloutput results/model_per
   *  Ckmeans.1d.dp
   *  vip
   *  ggplot2
+  *  pROC
