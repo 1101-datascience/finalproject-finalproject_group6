@@ -7,12 +7,12 @@
 * 張晏瑄, 106703056
 
 ### Goal
-從歷史信用卡留存/流失客戶的資料中，挖掘影響用戶流失的重要因子，並預測目前用戶的流失機率
+從信用卡留存/流失客戶的歷史資料中，挖掘影響用戶流失的重要因子，並預測目前用戶的流失機率
 
 ### Demo 
 You should provide an example commend to reproduce your result
 ```R
-Rscript code/your_script.R --input data/training --modeloutput results/model_performance.csv --sampleoutput results/sample_performance.csv --fsoutput results/fs_performance.csv
+Rscript Bank_Churn_Correct.R --input BankChurners.csv --modeloutput results/model_performance.csv --sampleoutput results/sample_performance.csv --fsoutput results/fs_performance.csv
 ```
 * any on-line visualization
 
