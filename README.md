@@ -66,7 +66,7 @@ Rscript Bank_Churn_Correct.R --input BankChurners.csv --modeloutput results/mode
 * Code/implementation which you include/reference (__You should indicate in your presentation if you use code for others. Otherwise, cheating will result in 0 score for final project.__)
   * 決策樹：https://www.google.com/search?q=r+decision+tree&oq=r++de&aqs=edge.1.69i57j69i59j0i512l5j69i60j69i65.7924j0j4&sourceid=chrome&ie=UTF-8 
   * XGBoost:https://xgboost.readthedocs.io/en/stable/R-package/xgboostPresentation.html
-  * SMOTE:https://iter01.com/480884.htmt https://medium.com/%E6%95%B8%E5%AD%B8-%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E8%88%87%E8%9F%92%E8%9B%87/smote-enn-%E8%A7%A3%E6%B1%BA%E6%95%B8%E6%93%9A%E4%B8%8D%E5%B9%B3%E8%A1%A1%E5%BB%BA%E6%A8%A1%E7%9A%84%E6%8E%A1%E6%A8%A3%E6%96%B9%E6%B3%95-cdb6324b711e
+  * SMOTE: 1.https://iter01.com/480884.htmt 2.https://medium.com/%E6%95%B8%E5%AD%B8-%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E8%88%87%E8%9F%92%E8%9B%87/smote-enn-%E8%A7%A3%E6%B1%BA%E6%95%B8%E6%93%9A%E4%B8%8D%E5%B9%B3%E8%A1%A1%E5%BB%BA%E6%A8%A1%E7%9A%84%E6%8E%A1%E6%A8%A3%E6%96%B9%E6%B3%95-cdb6324b711e
   * MWSMOTE:https://www.twblogs.net/a/5b87b64d2b71775d1cd8a077
   * imbalance:https://rpubs.com/yoompubs/467234
 * Packages you use
